@@ -15,8 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/profile',function()
-{
-	return "Nantipat";
-});
+Route::get('/profile','ProfileController@getProfile');
+
 Route::get('/profile','ProfileController@getYear');

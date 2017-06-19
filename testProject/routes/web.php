@@ -16,5 +16,4 @@ Route::get('/', function () {
 });
 
 Route::get('/profile','ProfileController@getProfile');
-
-Route::get('/profile','ProfileController@getYear');
+Route::get('/bithday','ProfileController@getYear');

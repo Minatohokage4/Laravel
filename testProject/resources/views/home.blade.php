@@ -1,20 +1,18 @@
-@extends('template') @section('content')
+@extends('template')
 
-<h3>Fucking world</h3>
+@section('content')
+  <div class="content">
+    <div class="row">
+      <h2>Your reminder </h2>
+      <div class="row">
+        <div class="well">
+          <span>Buy milk</span>
+          <a class ='btn btn-success pull-right'>Delete</a>
+        </div>
 
-<div class="form-group">
-
-  <label>Reminder</label>
-
-  <form method="post" action="/reminder/new">
-    <textarea name="reminder" rows="8" cols="80"></textarea>
-  </form>
-
-</div>
-
-<div class="form-group">
-  {{ csrf_field() }}
-  <input type="submit" class='btn btn-success' name="" value="create new reminder">
-</div>
+      </div>
+    </div>
+      @include('component.NewReminder')
+  </div>
 
 @endsection

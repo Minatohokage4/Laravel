@@ -8,7 +8,11 @@ class ProfileController extends Controller
 {
 	function getProfile()
 	{
-		return view('profile');
+		$person = ['name'=>'#Nantipat Tullawattana',
+		'department'=>'Software Engineer',
+		'skill'=>'PHP,JAVA,C++',
+		'status'=> 'Single'];
+		return view('profile',$person);
 	}
 	function getYear()
 	{

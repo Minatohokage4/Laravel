@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="{{exlixir('app.css')}}">
+  <link rel="stylesheet" href="{{elixir('css/app.css')}}">
   <title></title>
 </head>
 
@@ -29,7 +29,7 @@
     <!--/.container-fluid -->
   </nav>
   <div class="container">
-
+    @yield('content')
   </div>
 </body>
 

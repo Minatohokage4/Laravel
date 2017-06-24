@@ -17,7 +17,7 @@ route::get('/home',function()
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/','ReminderController@home');
+Route::get('/home','ReminderController@home');
 
 
 Route::get('/profile','ProfileController@getProfile');

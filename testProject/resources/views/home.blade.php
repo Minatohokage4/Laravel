@@ -1,18 +1,17 @@
-@extends('template')
-
-@section('content')
-  <div class="content">
+@extends('template') @section('content')
+<div class="content">
+  <div class="row">
+    <h2>Your reminder </h2>
     <div class="row">
-      <h2>Your reminder </h2>
-      <div class="row">
-        <div class="well">
-          <span>Buy milk</span>
-          <a class ='btn btn-success pull-right'>Delete</a>
-        </div>
-
+      @foreach ($reminders as $reminder)
+      <div class="well">
+        <span>{{$reminder}}</span>
+        <a class='btn btn-success pull-right'>Success</a>
       </div>
+    @endforeach
     </div>
-      @include('component.NewReminder')
   </div>
+  @include('component.NewReminder')
+</div>
 
 @endsection

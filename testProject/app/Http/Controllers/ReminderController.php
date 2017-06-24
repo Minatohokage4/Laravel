@@ -6,9 +6,13 @@ use Illuminate\Http\Request;
 
 class ReminderController extends Controller
 {
-    public home()
+    public function home()
     {
-        $Reminders = ['Buy Mike','Go to Bank','Move to out '];
-        return view ('home')   
+        $reminders = [
+        'Buy Mike',
+        'Go to Bank',
+        'Move to out '];
+
+        return view ('home',['reminders'=>$reminders]  );
     }
 }

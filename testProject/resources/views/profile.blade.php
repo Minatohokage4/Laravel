@@ -16,7 +16,7 @@
       <h1>Name : {{$name}}</h1>
       <h1>Department : {{$department}}</h1>
       <h1>Skill : {{$skill}}</h1>
-      <h1>Status : {{$status}}</h1>
+      <h1>Status : {{$status }}</h1>
     </div>
 
   </div>

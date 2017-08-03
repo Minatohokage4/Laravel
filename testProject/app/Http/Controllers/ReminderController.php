@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
+use App\Reminder;
 class ReminderController extends Controller
 {
     public function home()
@@ -12,8 +13,10 @@ class ReminderController extends Controller
         'Buy Mike',
         'Go to Bank',
         'Move to out '];*/
-        $reminders = DB::table('Reminder')->orderBy('id','asc')->get();
 
+        //$reminders = DB::table('Reminder')->orderBy('id','asc')->get();
+        $reminders = Reminder::orderBy('id','desc')->get();
+        
         return view ('home',['reminders'=>$reminders]  );
     }
 

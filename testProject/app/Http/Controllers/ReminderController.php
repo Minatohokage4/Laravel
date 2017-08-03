@@ -37,7 +37,8 @@ class ReminderController extends Controller
     public function deleteReminder(Request $request)
     {
       $id = $request->id;
-      DB::table('Reminder')->where('id',$id)->delete();
+      Reminder::find($id)->delete();
+      /*DB::table('Reminder')->where('id',$id)->delete();*/
       return back()->with('fucking one task');
     }
 }

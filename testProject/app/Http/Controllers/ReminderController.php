@@ -16,15 +16,21 @@ class ReminderController extends Controller
 
         //$reminders = DB::table('Reminder')->orderBy('id','asc')->get();
         $reminders = Reminder::orderBy('id','desc')->get();
-        
+
         return view ('home',['reminders'=>$reminders]  );
     }
 
     public function addReminder(Request $request)
     {
-      $body = $request->reminder;
+      /*$body = $request->reminder;
 
-      DB::table('Reminder')->insert(['body'=> $body,'isFinished'=>false,'createdUserID'=>1]);
+      DB::table('Reminder')->insert(['body'=> $body,'isFinished'=>false,'createdUserID'=>1]);*/
+      $reminder = new Reminder();
+      $reminder->body = $request->reminder;
+      $reminder->isFinished = true;
+      $reminder->createdUserID =1;
+
+      $reminder->save();
 
       return back();
     }
